@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href = "{% static '/css/guestviewbase.css' %}">    
+    <link rel="stylesheet" href="{% static '/css/donate.css' %}">
+    <script src="{% static '/js/search.js' %}"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:opsz@9..40&family=Dekko&family=Playfair+Display&display=swap');
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="container-image">
+            <div class="nav-bar">
+
+                <div class="logo">
+                    <a href="{% url 'home' %}" class="l-first"> T o g e t h e r</a>
+                    <a href="{% url 'home' %}" class="l-last">with tyson</a>
+                </div>
+    
+                    <ul>
+                        <li><a href="{% url 'donate' %}" class="button" id="donate">Donate</a></li>
+                        <li><a href="{% url 'about' %}" class="button" id="about">About</a></li>
+                        <li><a href="{% url 'signin' %}" class="button" id="signin">Sign In</a></li>
+                        <li><a href="{% url 'getstarted' %}" class="button" id="getstarted">Get Started</a></li>
+                    </ul>
+
+                <div class="hamburger-menu">
+                    <button>☰</button>
+                </div>
+                  
+            </div>
+
+            <div class="donate-container">
+
+                <div class="title">
+                    <header>Support a Cause</header>
+                    <p>Search by Organization Name or City</p>
+                </div>
+                
+                <div class="home-container">
+
+                    <div class="search" id="search">
+                        <form action="" id="form">
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <input type="text" placeholder="Search">
+                        </form>
+                    </div>
+
+                </div>
+            
+                <div class="search-box" id="searchbox">
+            
+                    <template id="template">
+                        {% load static %}
+                        <div class="link">
+                            <a href="{% url 'company' %}">Company Name</a>
+                        </div>
+                    </template>
+            
+            
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+{% load static %}    
+<script src="{% static '/js/general.js' %}"></script>
+</body>
+</html>
+

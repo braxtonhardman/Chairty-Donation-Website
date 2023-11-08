@@ -1,0 +1,7 @@
+{% extends 'loginview/base.html' %}
+
+{% block content %}
+<a href="{% url 'logoutview' %}">Log out</a>
+<p>{{ username }}</p>
+
+{% endblock %}

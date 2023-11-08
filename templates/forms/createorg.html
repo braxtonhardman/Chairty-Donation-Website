@@ -1,0 +1,44 @@
+{% extends 'guestview/base.html' %}
+
+{% block content %}
+
+<div class="loginbox">
+    <h1>Create Organization</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <div class="errors">
+            {% for field, errors in form.errors.items %}
+                {% for error in errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+        <p>Name</p>
+        {{ form.name }}
+
+        <p>Email</p>
+        {{ form.email }}
+
+        <p>Address</p>
+        {{ form.address }}
+
+        <p>City</p>
+        {{ form.city }}
+
+        <p>Phone Number</p>
+        {{ form.phone_num }}
+
+        <p>About</p>
+        {{ form.about }}
+
+        <div class="loginbox-footer">
+            <input class="submit" type="submit" name="">
+        </div>
+        
+    </form>
+
+</div>
+
+{% endblock %}

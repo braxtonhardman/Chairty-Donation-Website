@@ -1,0 +1,39 @@
+{% extends 'guestview/base.html' %}
+   
+ 
+{% block content %}
+    <div class="loginbox">
+        <h1>Create Account</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <div class="errors">
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+
+            <p>Username</p>
+            {{ form.username }}
+
+            <p>Email</p>
+            {{ form.email }}
+
+            <p>Password</p>
+            {{ form.password1 }}
+
+            <p>Confirm Password</p>
+            {{ form.password2 }}
+
+            <div class="loginbox-footer">
+                <input class="submit" type="submit" name="">
+                <a href="{% url 'signin' %}">Already have an account?</a><br>
+            </div>
+            
+        </form>
+
+    </div>
+{% endblock %}
+

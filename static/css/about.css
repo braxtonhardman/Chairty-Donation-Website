@@ -1,0 +1,21 @@
+.about-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 70%;
+    border-radius: 1rem;
+    margin-top: 10%;
+    font-family: 'DM Sans', sans-serif;
+    padding: 2%;
+
+}

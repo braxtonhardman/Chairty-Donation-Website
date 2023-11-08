@@ -1,0 +1,30 @@
+{% extends 'guestview/base.html' %}    
+
+
+{% block content %}
+    <div class="company-container">
+            {% load static %}
+            <img src="" alt="">
+
+        <div class="content">
+            <h1>Company Name</h1>
+            <p>About</p>
+            <button id="donateButton" class="stylish-button">Donate Now</button>
+        </div>
+        <!-- The Modal -->
+        <div id="donateModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Donate to Our Cause</h2>
+            <!-- You can embed your donation form here -->
+            <p class="special">Please enter your donation amount:</p>
+            <input type="number" placeholder="Amount in USD" id="donationAmount">
+            <button class="stylish-button" id="submit-donation">Submit Donation</button>
+        </div>
+
+    </div>
+
+    
+{% endblock %}

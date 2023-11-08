@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/loginviewbase.css' %}">
+    <link rel="stylesheet" href="{% static '/css/logo.css' %}">
+    <link rel="stylesheet" href="{% static '/css/searchbar.css' %}">
+
+    <script src="https://kit.fontawesome.com/a56ca89bd7.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:opsz@9..40&family=Dekko&family=Playfair+Display&display=swap');
+    </style>
+    
+    <title>Login View Base</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            
+            <div class="logo">
+                <a href="{% url 'loginhome' %}" class="l-first"> T o g e t h e r</a>
+                <a href="{% url 'loginhome' %}" class="l-last">with tyson</a>
+            </div>
+
+            <div class="search">
+                <form action="">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" placeholder="Search">
+                </form>
+            </div>
+
+            <div class="profile">
+                <button><i class="fa-solid fa-user fa-xl"></i></button>   
+            </div>
+        </div>
+
+        <div class="content-block">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

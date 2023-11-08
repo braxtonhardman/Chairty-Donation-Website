@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="stylesheet" href = "{% static '/css/guestviewbase.css' %}">    
+    <link rel="stylesheet" href="{% static '/css/forms.css' %}">
+    <link rel="stylesheet" href="{% static '/css/donate.css' %}">
+    <link rel="stylesheet" href="{% static '/css/company.css' %}">
+    <link rel="stylesheet" href="{% static '/css/about.css' %}">
+    <script src="{% static '/js/company.js' %}"></script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Sans:opsz@9..40&family=Dekko&family=Playfair+Display&display=swap');
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        
+        <div class="container-image">
+
+            <div class="nav-bar">
+
+                <div class="logo">
+                    <a href="{% url 'home' %}" class="l-first" id="home"> T o g e t h e r</a>
+                    <a href="{% url 'home' %}" class="l-last" id="home">with tyson</a>
+                </div>
+    
+                <ul>
+                    <li><a href="{% url 'donate' %}" class="button" id="donate">Donate</a></li>
+                    <li><a href="{% url 'about' %}" class="button" id="about">About</a></li>
+                    <li><a href="{% url 'signin' %}" class="button" id="signin">Sign In</a></li>
+                    <li><a href="{% url 'getstarted' %}" class="button" id="getstarted">Get Started</a></li>
+                </ul>
+
+                <div class="hamburger-menu">
+                    <button>☰</button>
+                </div>
+                  
+            </div>
+
+            {% block content %}
+
+            {% endblock %}
+        </div>
+
+    </div>
+
+    {% load static %}
+    <script src="{% static '/js/general.js' %}"></script>
+</body>
+</html>
