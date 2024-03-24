@@ -34,5 +34,6 @@ To use Togetherwithtyson, simply visit the home page and use the search feature 
 <img width="1464" alt="orgDetailedPage" src="https://github.com/braxtonhardman/Chairty-Donation-Website/assets/132535752/d1822058-a5e9-42a9-8926-9d53fe15ece1">
 
 - **Responsive Design**: Accessible on both desktop and mobile devices.
-  
+<img width="614" alt="iphoneSize" src="https://github.com/braxtonhardman/Chairty-Donation-Website/assets/132535752/e6baedf1-731c-4142-bc3c-b09244eb5516">
+
 
